@@ -1,0 +1,239 @@
+.body-home{
+    margin-left: 40px;
+    
+
+}
+
+.grid-body{
+    display: grid;
+    grid-template-columns: 320px 320px 320px;
+    grid-template-rows: 90px 90px 90px 90px 80px;
+    column-gap: 30px;
+    row-gap: 16px;
+}
+
+.headtext{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    color: #525455;
+}
+.form1{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 320px;
+    align-self: center;
+}.form1 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form2{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    align-self: center;
+    
+}.form2 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form3{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    align-self: center;
+}
+.form3 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form3 input{
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.form4{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    align-self: center;
+} 
+.form4 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}  
+.form4 input{
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.form5{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    align-self: center;
+}.form5 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form5 input{
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.form6{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    width: 150px;
+    align-self: center;
+}.form6 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form7{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    width: 150px;
+    justify-self: end;
+    align-self: center;
+
+}.form7 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form8{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    align-self: center;
+}.form8 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form8 input{
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.form9{
+    display: grid;
+    row-gap: 16px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    align-self: center;
+}.form9 label{
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    
+}
+.form9 input{
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.form10{
+    
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    align-self: center;
+}
+.form10 button{
+    background: #0093C6;
+    border-radius: 10px;
+    width: 233px;
+    height: 50px;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: white;
+
+}
+.form10 button:hover{
+    background-color: white;
+    color: #0093C6;
+
+}
+.form10 button:active {
+    /*box-shadow: 0 2px #666;*/
+    transform: translateY(4px);
+}

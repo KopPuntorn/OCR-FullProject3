@@ -1,0 +1,128 @@
+.SearchBar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    
+}
+.headsearch{
+    display: grid;
+    margin-left: 35px;
+    justify-items: start;
+    font-size: 24px;
+    font-weight: bold;
+    color: #525455;
+}
+.search11{
+    display: flex;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 40px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-content:flex-start;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.search22{
+    display: flex;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 40px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-content:flex-start;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search33{
+    display: flex;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 40px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-content:flex-start;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search44{
+    display: flex;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 40px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-content:flex-start;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search55{
+    display: flex;
+    margin-bottom: 20px;
+    justify-items: end;
+    align-content: center;
+    margin-right: 40px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.headbtn{
+    display: flex;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    margin-left: 40px;
+    color: #525455;
+}
+
+.btnadd{
+  display: grid;
+  background: #0093C6;
+  border-radius: 10px;
+  color: white;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  border-color: white;
+  height: 50px;
+  margin-top: 20px;
+  margin-top: 20px;
+  padding: 15px 25px;
+  cursor: pointer;
+  align-content: center;
+  margin-right: 20px;
+}
+
+.btnadd:hover {
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+  }

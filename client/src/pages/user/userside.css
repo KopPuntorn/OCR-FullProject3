@@ -1,0 +1,107 @@
+.searh{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    align-items: center;
+    position:relative;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    column-gap: 20px;
+}
+.search2{
+    display: flex;
+    align-items: baseline;
+    column-gap: 20px;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 40px;
+    margin-left: 40px;
+}
+.search3 {
+    display: flex;
+    align-items: baseline;
+    column-gap: 20px;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 40px;
+
+}.search4 {   
+    display: flex;
+    align-items: baseline;
+    column-gap: 20px;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 40px;
+}
+.search{
+    height: 40px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}.chblog{
+    display: flex;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    column-gap: 20px;
+    
+}
+
+.paginationBttns{
+    width: 80%;
+    height: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    left: 300px;
+    align-self: end;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    width: 150px;
+
+}
+
+.paginationBttns a{
+    padding: 5px 10px;
+    margin: 8px;
+    border-radius: 5px;
+    color: #0093C6;
+    cursor: pointer;
+
+
+}
+.paginationBttns a:hover{
+    color: white;
+    background-color: #0093C6;
+}
+
+.paginationActive a{
+    color: white;
+    background-color: #0093C6;
+}
+
+.HeadSearch1{
+    position: relative;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    color: #525455;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.chblog-table{
+    margin-left: 40px;
+}

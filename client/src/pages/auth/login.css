@@ -1,0 +1,299 @@
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --midnight-blue: rgba(16, 69, 122, 1);
+    --bon-jour : rgba(224, 224, 224, 1);
+    --white: rgba(255, 255, 255, 1);
+
+    --font-size-m: 20px;
+    --font-size-l: 26px;
+    --font-size-xl: 36px;
+
+    --font-family-db-heavent-bold: "DB Heavent-Bold";
+    --font-family-db-heavent-regular: "DB Heavent-Regular";
+}
+
+
+
+.desktop-14 {
+    align-items: flex-start;
+    background-color: var(--white);
+    display: flex;
+    height: 638px;
+    width: 1440px;
+    align-items: center;
+}
+.overlap-group2 {
+    align-items: center;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 769px;
+    padding: 101px 314px;
+    width: 1440px;
+}
+.text-6 {
+    line-height: 40px;
+    min-height: 40px;
+    white-space: nowrap;
+}
+.group-3543 {
+    align-items: center;   
+    border-radius: 10px;
+    display: flex;
+    height: 62px;
+    margin-top: 34px;
+    min-width: 596px;
+    padding: 0 7px;
+}
+.overlap-group {
+    align-items: center;
+    background-color: #10457a1a;
+    border-radius: 8px;
+    display: flex;
+    height: 48px;
+    justify-content: flex-end;
+    min-width: 291px;
+    padding: 0 32.3px;       
+}
+
+.text-7 {
+    color: var(--midnight-blue);
+    font-family: var(--font-family-db-heavent-bold);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    letter-spacing: 0;
+    min-height: 24px;
+    text-align: center;
+    width: 226px;
+}
+
+.text-8 {
+    color: #bdbdbd;
+    font-family: var(--font-family-db-heavent-regular);
+    font-size: 15.5px;
+    letter-spacing: 0;
+    margin-left: 17px;
+    min-height: 24px;
+    text-align: center;
+    width: 257px;
+}
+
+.group-3542 {
+    -webkit-backdrop-filter: blur(30px) brightness(100%);
+    align-items: flex-end;
+    backdrop-filter: blur(30px) brightness(100%);
+    background-color: #ffffff33;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    min-height: 410px;
+    padding: 43px 66px;
+    width: 596px;
+}
+
+.frame-36255 {
+    align-items: flex-start;
+    align-self: center;
+    display: flex;
+    height: 40px;
+    margin-right: 2.0px;
+    margin-top: 7px;
+    min-width: 146px;
+}
+
+.bxbxs-lock {
+    height: 33px;
+    width: 33px;
+    background: url('lock.svg');
+}
+
+.text-5 {
+    letter-spacing: 0;
+    line-height: 40px;
+    margin-left: 8px;
+    min-height: 40px;
+    white-space: nowrap;
+}
+
+.group-username {
+    align-items: center;
+    margin-top: 52px;
+    min-width: 600px;
+    
+}
+
+
+
+.group-password {
+    align-items: center;
+    margin-top: 33px;
+    min-width: 600px;
+}
+
+.text-1 {
+    font-family: var(--font-family-db-heavent-regular);
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 40px;
+    min-height: 40px;
+    white-space: nowrap;
+}
+
+
+.text-2 {
+    font-family: var(--font-family-db-heavent-regular);
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 40px;
+    margin-bottom: 0.81px;
+    min-height: 40px;
+    text-align: center;
+    white-space: nowrap;
+    width: 50px;
+}
+
+.overlap-group-1 {
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    height: 45px;
+    margin-left: 30px;
+    min-width: 392px;
+    padding: 1.0px 15.9px;
+}
+
+.pri001 {
+    letter-spacing: 0;
+    line-height: 40px;
+    min-height: 40px;
+    white-space: nowrap;
+}
+
+
+
+
+.overlap-group1 {
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    height: 45px;
+    margin-left: 18px;
+    min-width: 392px;
+    padding: 12px 16px;
+}
+
+.text-3 {
+    letter-spacing: 0;
+    margin-top: 1px;
+    min-height: 17px;
+    width: 46px;
+}
+
+.fa-solideye-slash {
+    height: 19px;
+    margin-left: 290px;
+    width: 24px;
+}
+.frame-36217 {
+    align-items: center;
+    align-self: center;
+    background-color: #0093c6;
+    border-radius: 10px;
+    display: flex;
+    height: 50px;
+    margin-right: 3.0px;
+    margin-top: 52px;
+    min-width: 233px;
+    padding: 0 10px;
+}
+.text-4 {
+    color: white;
+    font-family: var(--font-family-db-heavent-regular);
+    font-size: 17.5px;
+    letter-spacing: 0;
+    line-height: 40px;
+    min-height: 40px;
+    text-align: center;
+    white-space: nowrap;
+    width: 213px;
+}
+@font-face{
+    font-family: "DB Heavent-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.animaapp.com/DBHeavent-Regular")
+    format("truetype");
+}
+
+@font-face {
+    font-family: "DB Heavent-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.animaapp.com/DBHeavent-Bold")
+    format("truetype");
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal > * {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.db-heavent-bold-midnight-blue-36px {
+    color: var(--midnight-blue);
+    font-family: var(--font-family-db-heavent-bold);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.db-heavent-regular-normal-black-20px{
+    color: var(--black);
+    font-family: var(--font-family-db-heavent-regular);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.border-1px-bon-jour {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--bon-jour);
+}
+
+.ant-btn-primary {
+    color: white;
+    background: #0093C6;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    height: 50px;
+    margin-right: 3.0px;
+    margin-top: 52px;
+    min-width: 233px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 26px;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+   
+}
+
+

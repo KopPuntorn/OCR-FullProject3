@@ -1,0 +1,31 @@
+.Header{
+    display: grid;
+    background: white;
+    height: 85px;
+    width: 1440px;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 999;
+    position: fixed;
+      
+  }
+  .HeadText{
+    width: 100%;
+    height: 100;
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: DB Heavent;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #525455;
+  }
+  .Logo{
+    height: 88px;
+    margin-left: 1rem;
+  }
+  
