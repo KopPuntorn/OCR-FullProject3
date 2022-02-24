@@ -5,6 +5,7 @@ import Layout from './layout/Layout';
 import Upload1 from './Upload1';
 import Inmoney from './inmoney/Inmoney';
 import UpForm2 from './inmoney/UpForm2'
+import UpForm22 from './inmoney/UpForm22'
 import UpForm3 from './inobj/UpForm3';
 import InObject from './inobj/Inobj';
 import InRes from './inres/Inres';
@@ -36,6 +37,7 @@ const HomeAdmin = () => {
                         <Route path="/admin/dashboard" exact component= {AdminDashboard} />
                         <Route path="/admin/upload2" exact component= {Inmoney} />
                         <Route path="/admin/upload2/upfrom" exact component= {UpForm2} />
+                        <Route path="/admin/upload2/upfrom2" exact component= {UpForm22} />
                         <Route path="/admin/upload3" exact component= {InObject} />
                         <Route path="/admin/upload3/upfrom" exact component= {UpForm3} />
                         <Route path="/admin/upload4" exact component= {InRes} />

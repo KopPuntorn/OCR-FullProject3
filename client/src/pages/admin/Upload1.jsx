@@ -118,7 +118,6 @@ const Upload1 = () => {
             title: 'รายละเอียด',
             render: (record) => (
                 <>
-                
                     <a href={`http://localhost:5000/uploads/${record.pic}`} target="_blank" >
                     รายละเอียด 
                     </a>
