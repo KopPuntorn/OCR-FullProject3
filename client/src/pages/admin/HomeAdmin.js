@@ -45,7 +45,7 @@ const HomeAdmin = () => {
                     <Switch>
                         <Route path="/admin/upload1" exact component= {Upload1} />
                         <Route path="/admin/upload1/upfrom" exact component= {AdminDashboard} />
-                        <Route path="/admin/upload1/upfrom2" exact component= {UpForm11} />
+                        <Route path="/admin/upload1/upfrom2" exact component= {Upload11} />
                         <Route path="/admin/upload2" exact component= {Inmoney} />
                         <Route path="/admin/upload2/upfrom" exact component= {UpForm2} />
                         <Route path="/admin/upload2/upfrom2" exact component= {UpForm22} />
