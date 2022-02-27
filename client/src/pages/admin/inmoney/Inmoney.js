@@ -59,8 +59,6 @@ const Inmoney = () => {
         setGame(gameState)
       }
 
-
-
     const disabledDate = current => {
         if (!dates || dates.length === 0) {
           return false;
@@ -69,7 +67,6 @@ const Inmoney = () => {
         const tooEarly = dates[1] && dates[1].diff(current, 'days') > 7;
         return tooEarly || tooLate;
       };
-
 
       const onOpenChange = open => {
         if (open) {
@@ -177,7 +174,7 @@ const Inmoney = () => {
             <button className="btnadd">+ เพิ่มรับเข้าเอกสาร</button></Link></div><div><Table columns={columns} dataSource={filteredData} rowKey="_id" className="upload-table" defaultPageSize= "2"/></div></div>
           case 'playing':
             return <div><div className="search55"><div className="headbtn">รายการส่งออกเอกสาร</div><Link to="/admin/upload2/upfrom2" className="outbtn">
-            <button className="btnadd">+ เพิ่มรับเข้าเอกสาร</button></Link></div><div><Table columns={columns} dataSource={filteredData1} rowKey="_id" className="upload-table" defaultPageSize= "2"/></div></div>
+            <button className="btnadd">+ เพิ่มส่งออกเอกสาร</button></Link></div><div><Table columns={columns} dataSource={filteredData1} rowKey="_id" className="upload-table" defaultPageSize= "2"/></div></div>
           default:
             return null
         }

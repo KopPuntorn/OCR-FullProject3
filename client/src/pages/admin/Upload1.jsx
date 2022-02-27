@@ -5,6 +5,7 @@ import locale from 'antd/lib/locale/th_TH';
 import { AiOutlineVerticalAlignBottom} from "react-icons/ai";
 import DownloadLink from "react-download-link";
 import { getPerson } from '../../functions/person';
+import { getOutPerson } from '../../functions/outperson';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { PlusOutlined } from '@ant-design/icons';
@@ -20,8 +21,10 @@ const Upload1 = () => {
     const [dates, setDates] = useState([]);
     const [value, setValue] = useState();
     const [person, setPerson] = useState([]);
-    const [loading, setLoading] = useState(false);
     const { user } = useSelector((state) => ({ ...state }))
+    const [person1, setPerson1] = useState([]);
+    const [game, setGame] = useState('card')
+    
     
 
     useEffect(() => {
@@ -32,6 +35,25 @@ const Upload1 = () => {
         getPerson(authtoken)
             .then((res) => {
                 setPerson(res.data)
+                console.log(res.data)
+            }).catch((err) => {
+                toast.error(err)
+                console.log(err)
+            })
+    }
+
+    const handleClick = (gameState) => {
+        setGame(gameState)
+      }
+
+      useEffect(() => {
+        loadPerson1(user.token);
+      }, [])
+
+      const loadPerson1 = (authtoken) => {
+        getOutPerson(authtoken)
+            .then((res) => {
+                setPerson1(res.data)
                 console.log(res.data)
             }).catch((err) => {
                 toast.error(err)
@@ -127,7 +149,7 @@ const Upload1 = () => {
     ]
 
     const filteredData = person.filter((CardData) => CardData.name.includes(searchText)).filter((CardData) => CardData.locate.includes(searchNo)).filter((CardData) => CardData.from.includes(searchFrom))
-      
+    const filteredData1 = person1.filter((CardData) => CardData.name.includes(searchText)).filter((CardData) => CardData.locate.includes(searchNo)).filter((CardData) => CardData.from.includes(searchFrom))  
 
   return <div>
       <div className='SearchBar'><div className='headsearch'>ค้นหา</div>
@@ -145,12 +167,22 @@ const Upload1 = () => {
         <div className="search33">ที่ <SearchBox value={searchNo} onValueChange={setSearchNo} placeholder="ที่"/></div>
         <div className="search44">จาก <SearchBox value={searchFrom} onValueChange={setSearchFrom} placeholder="ระบุจาก"/>
         <Radio.Group defaultValue="a" buttonStyle="solid">
-            <Radio.Button value="a">รับเข้า</Radio.Button>
-            <Radio.Button value="b">ส่งออก</Radio.Button>
+            <Radio.Button value="a" onClick={ () => handleClick('card')}>รับเข้า</Radio.Button>
+            <Radio.Button value="b" onClick={ () => handleClick('playing')}>ส่งออก</Radio.Button>
         </Radio.Group></div>
         </div>
-      <div><div className="search55"><div className="headbtn">รายการรับเข้าเอกสาร</div><Link to="/admin/dashboard" className="outbtn">
-      <button className="btnadd">+ เพิ่มรับเข้าเอกสาร</button></Link></div><div><Table columns={columns} dataSource={filteredData} rowKey="_id" className="upload-table" defaultPageSize= "2"/></div></div>
+        {(() => {
+        switch (game) {
+          case 'card':
+            return <div><div className="search55"><div className="headbtn">รายการรับเข้าเอกสาร</div><Link to="/admin/upload1/upfrom" className="outbtn">
+            <button className="btnadd">+ เพิ่มรับเข้าเอกสาร</button></Link></div><div><Table columns={columns} dataSource={filteredData} rowKey="_id" className="upload-table" defaultPageSize= "2"/></div></div>
+          case 'playing':
+            return <div><div className="search55"><div className="headbtn">รายการส่งออกเอกสาร</div><Link to="/admin/upload1/upfrom2" className="outbtn">
+            <button className="btnadd">+ เพิ่มส่งออกเอกสาร</button></Link></div><div><Table columns={columns} dataSource={filteredData1} rowKey="_id" className="upload-table" defaultPageSize= "2"/></div></div>
+          default:
+            return null
+        }
+      })()}
         
       </div>;
 };

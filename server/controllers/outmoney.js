@@ -1,4 +1,4 @@
-const InMoney = require('../models/outmoney')
+const OutMoney = require('../models/outmoney')
 const fs = require('fs');
 
 

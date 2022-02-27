@@ -39,4 +39,4 @@ const InEduSchema = new mongoose.Schema({
 
 }, { timestamps: true});
 
-module.exports = InEduso = mongoose.model('inedu', InEduSchema);
+module.exports = InEdu = mongoose.model('inedu', InEduSchema);
