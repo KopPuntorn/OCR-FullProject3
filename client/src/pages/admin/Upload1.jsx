@@ -8,7 +8,6 @@ import { getPerson } from '../../functions/person';
 import { getOutPerson } from '../../functions/outperson';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { PlusOutlined } from '@ant-design/icons';
 import './upload1.css';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +24,7 @@ const Upload1 = () => {
     const [person1, setPerson1] = useState([]);
     const [game, setGame] = useState('card')
     
-    
+    console.log(dates[0].toString);
 
     useEffect(() => {
         loadPerson(user.token);
@@ -67,9 +66,6 @@ const Upload1 = () => {
         if (!dates || dates.length === 0) {
           return false;
         }
-        const tooLate = dates[0] && current.diff(dates[0], 'days') > 7;
-        const tooEarly = dates[1] && dates[1].diff(current, 'days') > 7;
-        return tooEarly || tooLate;
       };
 
 
@@ -161,7 +157,7 @@ const Upload1 = () => {
                 onCalendarChange={val => setDates(val)}
                 onChange={val => setValue(val)}
                 onOpenChange={onOpenChange}
-                format= 'DD/MM/YYYY'
+                format= 'YYYY/MM/DD'
             /></ConfigProvider></div>
         <div className="search22">ใส่คำค้นหา <SearchBox value={searchText} onValueChange={setSearchText} placeholder="คำค้นหา"/></div>
         <div className="search33">ที่ <SearchBox value={searchNo} onValueChange={setSearchNo} placeholder="ที่"/></div>

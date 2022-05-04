@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import CardDatas from '../../components/UserComponent/Card/CardDatas'
-import NewCardDatas from '../../components/UserComponent/Card/NewCardDatas';
 import CardPost from '../../components/UserComponent/Card/CardPost';
 import Cards from '../../components/UserComponent/Card/Cards';
-import SearchBox from '../../components/UserComponent/SearchBox/SearchBox';
 import './userside.css';
+import SearchBox from '../../components/UserComponent/SearchBox/SearchBox';
 import ReactPaginate from 'react-paginate';
-import { AiOutlineInsertRowBelow, AiOutlineBlock } from 'react-icons/ai';
-import { MdOutlineTableRows } from 'react-icons/md';
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from  "react-datepicker";
 import th from 'date-fns/locale/th';
@@ -16,12 +12,13 @@ import { BlockOutlined, UnorderedListOutlined, FilePdfTwoTone } from '@ant-desig
 import { getPerson } from '../../functions/person';
 import { toast } from 'react-toastify';
 import { ConfigProvider, DatePicker , Table, Avatar, Image, Switch,Button, Tooltip } from 'antd';
-import { DeleteOutlined, VerifiedOutlined } from '@ant-design/icons';
 import { AiOutlineVerticalAlignBottom} from "react-icons/ai";
-import { removePerson } from '../../functions/person';
 import DownloadLink from "react-download-link";
 import locale from 'antd/lib/locale/th_TH';
 import IconButton from '@mui/material/IconButton';
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+
+
 
 
 
@@ -29,15 +26,34 @@ function UserSide() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [searchText, setSearchText] = useState('');
   const [searchNo, setSearchNo] = useState('');
-  const { RangePicker } = DatePicker;
-  const [hackValue, setHackValue] = useState();
-  const [value, setValue] = useState();
-  const [dates, setDates] = useState([]);
   const [person, setPerson] = useState([]);
-  const [loading, setLoading] = useState(false);
   const { user } = useSelector((state) => ({ ...state }))
   const [game, setGame] = useState('card')
   const { Column, ColumnGroup } = Table;
+  const { RangePicker } = DatePicker;
+  const [hackValue, setHackValue] = useState();
+  const [dates, setDates] = useState([]);
+  const [value, onChange] = useState([new Date(), new Date()]);
+
+  let reald = value[0].toString();
+  let reald1 = value[1].toString();
+
+  const onOpenChange = open => {
+    if (open) {
+      setHackValue([]);
+      setDates([]);
+    } else {
+      setHackValue(undefined);
+    }
+  };
+  const disabledDate = current => {
+    if (!dates || dates.length === 0) {
+      return false;
+    }
+    const tooLate = dates[0] && current.diff(dates[0], 'days') > 7;
+    const tooEarly = dates[1] && dates[1].diff(current, 'days') > 7;
+    return tooEarly || tooLate;
+  };
 
   useEffect(() => {
     loadPerson(user.token);
@@ -56,23 +72,9 @@ function UserSide() {
 
 registerLocale('th', th)
 
-const disabledDate = current => {
-  if (!dates || dates.length === 0) {
-    return false;
-  }
-  const tooLate = dates[0] && current.diff(dates[0], 'days') > 7;
-  const tooEarly = dates[1] && dates[1].diff(current, 'days') > 7;
-  return tooEarly || tooLate;
-};
-
-const onOpenChange = open => {
-  if (open) {
-    setHackValue([]);
-    setDates([]);
-  } else {
-    setHackValue(undefined);
-  }
-};
+function checkdate(){
+  console.log(reald);
+}
 
   function onCardOpenClick(theCard){
     setSelectedCard(theCard);
@@ -82,7 +84,7 @@ const onOpenChange = open => {
     setSelectedCard(null);
   }
 
-  const filteredCards = person.filter((person) => person.name.includes(searchText)).filter((person) => person.locate.includes(searchNo))
+  const filteredCards = person.filter((person) => person.name.includes(searchText)).filter((person) => person.locate.includes(searchNo)).filter((person) => (person.dateGen >= reald && person.dateGen <= reald1))
   const filteredData = person.filter((CardData) => CardData.name.includes(searchText)).filter((CardData) => CardData.locate.includes(searchNo))
 
   const cardElements = filteredCards.map((CardData, index) => {
@@ -128,8 +130,6 @@ const onOpenChange = open => {
       );
       setItemOffset(newOffset);
     };
-
-  
     return (
       <><div className="app-grid">
         <Items currentItems={currentItems} />
@@ -137,7 +137,6 @@ const onOpenChange = open => {
           breakLabel="..."
           nextLabel=">"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
           pageCount={pageCount}
           previousLabel="<"
           renderOnZeroPageCount={null}
@@ -154,34 +153,10 @@ const onOpenChange = open => {
       </>
     );
   }
-
-  /*const columns = [
-
-    {
-      title: 'เรื่อง',
-      dataIndex: 'name',
-      key: 'name'
-    },
-    {
-        title: 'Download',
-        render: (record) => (
-            <DownloadLink className="button-field-download"  filename={record.pic} label="Download" >
-               
-                <AiOutlineVerticalAlignBottom className="button-icon-download"/>          
-                <div className="button-text-download">
-                ดาวน์โหลด</div>
-            </DownloadLink>
-        )
-    },
-    
-
-]*/
-
   let cardPost = null;
   if(!!selectedCard){
     cardPost = <CardPost CardData={selectedCard} onBgClick={onCardCloseClick}/>
   }
-
   const handleClick = (gameState) => {
     setGame(gameState)
   }
@@ -191,15 +166,7 @@ const onOpenChange = open => {
       <div className="searh">
         <div className="search2">ใส่คำค้นหา<SearchBox value={searchText} onValueChange={setSearchText} placeholder="คำค้นหา"/></div>
         <div className="search3">เลขที่หนังสือ<SearchBox value={searchNo} onValueChange={setSearchNo} placeholder="เลขที่หนังสือ"/></div>
-        <div className="search4">วันที่ <ConfigProvider locale={locale}> 
-        <RangePicker
-            value={hackValue || value}
-            disabledDate={disabledDate}
-            onCalendarChange={val => setDates(val)}
-            onChange={val => setValue(val)}
-            onOpenChange={onOpenChange}
-            format= 'DD/MM/YYYY'
-            /></ConfigProvider></div>
+        <div className="search4">วันที่ <input type="date"></input><butons onClick={checkdate}>sdsad</butons></div>
         <div className="chblog">
         <IconButton aria-label="delete" onClick={ () => handleClick('card')} color="primary"> 
         <BlockOutlined />
@@ -243,6 +210,7 @@ const onOpenChange = open => {
           default:
             return null
         }
+
       })()}
     </div>
     

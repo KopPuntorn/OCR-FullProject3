@@ -62,6 +62,8 @@ const onOpenChange = open => {
   if (open) {
     setHackValue([]);
     setDates([]);
+    console.log(this.value);
+    console.log(this.dates);
   } else {
     setHackValue(undefined);
   }
@@ -69,6 +71,7 @@ const onOpenChange = open => {
 
   function onCardOpenClick(theCard){
     setSelectedCard(theCard);
+    console.log(value)
   }
 
   function onCardCloseClick(){
@@ -130,7 +133,7 @@ const onOpenChange = open => {
           breakLabel="..."
           nextLabel=">"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={2}
           pageCount={pageCount}
           previousLabel="<"
           renderOnZeroPageCount={null}
@@ -139,7 +142,6 @@ const onOpenChange = open => {
           nextLinkClassName={"nextBttn"}
           disabledClassName={"paginationDisabled"}
           activeClassName={"paginationActive"}
-          pageRangeDisplayed={2}
           marginPagesDisplayed={2}
         />
         </div>

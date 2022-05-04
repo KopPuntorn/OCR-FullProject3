@@ -21,7 +21,7 @@ const AdminDashboard = () => {
     const [person, setPerson] = useState([]);
     const [ file, setFile] = useState();
     const [ filename, setFilename] = useState('')
-    const [ dateFirst, setDateFirst] = useState('');
+    const [ dateFirst1, setDateFirst] = useState('');
     const [ numTo, setNumTo] = useState('');
     const [ locate, setLocate ] = useState('');
     const [ dateGen, setDateGen] = useState('');
@@ -35,6 +35,8 @@ const AdminDashboard = () => {
         loadPerson(user.token);
        
     }, [])
+
+    const dateFirst = dateFirst1.toString();
 
    
     const loadPerson = (authtoken) => {

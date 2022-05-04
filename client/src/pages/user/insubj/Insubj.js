@@ -130,7 +130,6 @@ const onOpenChange = open => {
           breakLabel="..."
           nextLabel=">"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
           pageCount={pageCount}
           previousLabel="<"
           renderOnZeroPageCount={null}
@@ -148,27 +147,6 @@ const onOpenChange = open => {
     );
   }
 
-  /*const columns = [
-
-    {
-      title: 'เรื่อง',
-      dataIndex: 'name',
-      key: 'name'
-    },
-    {
-        title: 'Download',
-        render: (record) => (
-            <DownloadLink className="button-field-download"  filename={record.pic} label="Download" >
-               
-                <AiOutlineVerticalAlignBottom className="button-icon-download"/>          
-                <div className="button-text-download">
-                ดาวน์โหลด</div>
-            </DownloadLink>
-        )
-    },
-    
-
-]*/
 
   let cardPost = null;
   if(!!selectedCard){
